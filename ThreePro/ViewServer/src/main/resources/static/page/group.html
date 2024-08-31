@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>群聊页面</title>
+    <script src="../assets/js/jQuery.js"></script>
+    <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/personal.css">
+    <link rel="stylesheet" href="../css/createGroup.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">ThreePro即时社交平台</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <i class="nav-link dropdown-toggle"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mode">
+                        模式
+                    </i>
+
+                </li>
+                <li class="btn-group" role="group" aria-label="Basic example" id="myMode">
+                    <a href="/page/index.html"><button type="button" class="btn btn-primary">personal</button></a>
+                    <a href="/page/group.html"><button type="button" class="btn btn-primary">grounp</button></a>
+                    <a href="/page/social.html"><button type="button" class="btn btn-primary">social</button></a>
+                </li>
+                <div id="marg"></div>
+                <input class="form-control"  id="searchF" placeholder="Type to search...">
+            </ul>
+        </div>
+        <img src="../img/仓库.svg" alt="" id="cangku">
+        <label class="btn btn-outline-danger" id="closeWindow">close</label>
+    </div>
+</nav>
+
+
+
+<div class="container-fluid" id="ou-1">
+    <div class="row align-items-start" id="ou-2">
+        <div class="col-3" id="navs">
+            <ol class="list-group list-group-numbered" id="friendList">
+
+            </ol>
+        </div>
+
+        <div class="col-6" id="containers">
+            <button type="button" class="btn btn-primary">
+                群组 <span class="badge bg-secondary">0</span>
+            </button>
+            <span class="badge bg-secondary">在线人数</span>
+            <span class="badge bg-success">全部人数</span>
+            <div id="message"></div>
+            <div class="container" id="inputGo">
+                <div class="row">
+                    <div class="col-sm">
+                        <input class="form-control form-control-lg" type="text" placeholder="赶快来给朋友发一条消息吧" aria-label=".form-control-lg example" id="search">
+                    </div>
+                    <div class="col-sm">
+                        <button type="button" class="btn btn-primary" id="mSend">发送</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-3" id="info">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon2">@</span>
+                <input type="text" class="form-control" placeholder="群组ID" aria-label="Username" aria-describedby="basic-addon1" readonly id="groupIds">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="群主ID" aria-label="Username" aria-describedby="basic-addon1" readonly id="userIds">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">年龄</span>
+                <input type="text" class="form-control" readonly aria-label="Amount (to the nearest dollar)" id="userAges">
+                <span class="input-group-text">岁</span>
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control"  readonly placeholder="群主名称" aria-label="Username" id="userNames">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" readonly placeholder="群组名称" aria-label="Server" id="userService">
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-text">master Introduce</span>
+                <textarea class="form-control" aria-label="With textarea" readonly id="userIntros"></textarea>
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-text">group Introduce</span>
+                <textarea class="form-control" aria-label="With textarea" readonly id="userDescribs"></textarea>
+            </div>
+            <div id="emsp">
+                <span class="badge bg-primary" id="gen1">男</span>
+                <span class="badge bg-danger" id="gen2">女</span>
+                <button type="button" class="btn btn-info" id="addF">加入群组</button>
+                <button type="button" class="btn btn-secondary" id="delF">退出群组</button>
+                <button type="button" class="btn btn-success" id="cG">创建群组</button>
+            </div>
+            <img src="../img/群组.svg" class="rounded mx-auto d-block" alt="...">
+        </div>
+    </div>
+</div>
+
+<ul class="list-group hide" id="request">
+    <li class="list-group-item active" aria-current="true">入群请求</li>
+</ul>
+
+
+<div class="jumbotron" id="createGroup">
+    <div class="container">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">-</span>
+                <span class="input-group-text">群名称</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="gName">
+        </div>
+
+        <div class="input-group">
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="gIntro">
+            <div class="input-group-append">
+                <span class="input-group-text">群介绍</span>
+                <span class="input-group-text">-</span>
+            </div>
+        </div>
+
+            <p class="lead" id="margins">
+                <button type="button" class="btn btn-primary" id="updateCreate">提交</button>
+                <button type="button" class="btn btn-success"></button>
+                <button type="button" class="btn btn-danger"></button>
+                <button type="button" class="btn btn-secondary" id="closeCreate">关闭</button>
+            </p>
+    </div>
+
+
+</div>
+<script src="../js/createGroup.js"></script>
+<script src="../js/binGroup.js"></script>
+<script src="../js/groupHidden.js"></script>
+<script src="../js/getAllGroup.js" type="module"></script>
+<script src="../js/changeMode.js"></script>
+<script src="../js/searchGroup.js" type="module"></script>
+<script src="../js/deleteGroup.js"></script>
+<script src="../js/addGroup.js"></script>
+<script src="../js/close.js"></script>
+<script src="../assets/js/socket.io.min.js"></script>
+<script src="../js/message/oneToGroup.js"></script>
+</body>
+</html>

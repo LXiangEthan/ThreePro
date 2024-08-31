@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../assets/js/jQuery.js"></script>
+    <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/socialMain.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">ThreePro即时社交平台</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <i class="nav-link dropdown-toggle"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mode">
+                        模式
+                    </i>
+
+                </li>
+                <li class="btn-group" role="group" aria-label="Basic example" id="myMode">
+                    <a href="/page/index.html"><button type="button" class="btn btn-primary">personal</button></a>
+                    <a href="/page/group.html"><button type="button" class="btn btn-primary">grounp</button></a>
+                    <a href="/page/social.html"><button type="button" class="btn btn-primary">social</button></a>
+                </li>
+                <div id="marg"></div>
+                <input class="form-control"  id="searchF" placeholder="Type to search...">
+            </ul>
+        </div>
+        <button type="button" class="btn btn-info" id="writeInfoC">发布评论</button>
+        <button type="button" class="btn btn-info" id="writeInfo">创建文章</button>
+        <label class="btn btn-outline-danger" id="closeWindow">close</label>
+    </div>
+</nav>
+<div class="container text-center" id="main-1">
+    <div class="row align-items-start" id="main-2">
+        <div class="col">
+            <div class="border border-success p-2 mb-2" id="nav-1">帖主</div>
+            <div class="card" id="intro" style="width: 100%;background-color: #4e555b">
+                <img src="../img/头像%20女孩.svg" class="card-img-top" alt="..." id="myHead">
+                <div class="card-body">
+                    <h5 class="card-title" id="myName">姓名</h5>
+                    <h6 class="card-title" id="myAge">年龄</h6>
+                    <p class="card-text" id="myIntro">个人介绍</p>
+                    <a href="#" class="btn btn-primary" userId="" id="myId">去看看他</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-8 border border-5" id="main-3">
+            <div class="border border-success p-2 mb-2" style="background-color: #005cbf">帖子</div>
+        </div>
+        <div class="col" id="nav-0">
+            <div class="border border-success p-2 mb-2" id="nav-2">评论</div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron" id="InfoDatas">
+    <h1 class="display-3" id="authorId"></h1>
+    <p class="lead" id="MainInfo"></p>
+    <hr class="my-4">
+    <p id="myTime"></p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button" id="InfoClose">关闭</a>
+    </p>
+</div>
+
+<div class="jumbotron" id="authorInfo">
+    <p class="lead">Id已经复制到了剪切板，两秒后自动跳转</p>
+</div>
+<div class="jumbotron" id="addArticle">
+    <h1 class="display-3">欢迎来到简写板</h1>
+    <p class="lead">-----</p>
+    <hr class="my-4">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">With textarea</span>
+        </div>
+        <textarea class="form-control" aria-label="With textarea" id="contain"></textarea>
+    </div>
+    <p class="lead" style="margin-top: 30px;">
+        <a class="btn btn-primary btn-lg" href="#" role="button" id="send">发布文章</a>
+    </p>
+</div>
+
+
+<div class="jumbotron" id="addComments">
+    <h1 class="display-3">欢迎来到简写板</h1>
+    <p class="lead">-----</p>
+    <hr class="my-4">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">With textarea</span>
+        </div>
+        <textarea class="form-control" aria-label="With textarea" id="contain1"></textarea>
+    </div>
+    <p class="lead" style="margin-top: 30px;">
+        <a class="btn btn-primary btn-lg" href="#" role="button" id="send1">发布评论</a>
+    </p>
+</div>
+
+<script src="../js/showArticle.js"></script>
+<script src="../js/changeMode.js"></script>
+<script src="../js/socialHidden.js"></script>
+<script src="../js/showAuthor.js"></script>
+<script src="../js/addArticle.js"></script>
+<script src="../js/addComment.js"></script>
+</body>
+</html>

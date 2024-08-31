@@ -1,0 +1,2 @@
+$("#myMode").hide()
+$("#request").hide()

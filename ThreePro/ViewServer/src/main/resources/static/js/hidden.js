@@ -1,0 +1,8 @@
+$("#vPassword").hide()
+$("#intro").hide()
+$("#describe").hide()
+$("#ageBar").hide()
+$("#gender").hide()
+$(".sOut").hide()
+$("#end").hide()
+$("#warning").hide()

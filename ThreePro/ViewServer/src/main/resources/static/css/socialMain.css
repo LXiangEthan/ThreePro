@@ -1,0 +1,60 @@
+html,body{
+    height:100%;
+    overflow: hidden;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+#main-3,#comment{
+    width: 0;
+    overflow: auto;
+}
+#main-1,#main-2,#main-3{
+    background: #4e555b;
+    height:100%;
+    color:white;
+}
+#nav-1,#nav-2{
+    background: #005cbf;
+}
+#end{
+    height:60px;
+}
+#info{
+    overflow: hidden;
+    height:26px;
+    white-space:nowrap;text-overflow:ellipsis;
+}
+
+#authorInfo{
+    position: fixed;
+    top:100px;
+    width:500px;
+    height:250px;
+    left:calc(50% - 250px);
+}
+
+#writeInfo{
+    margin-right: 10px;
+    margin-bottom: 7px;
+}
+
+#addArticle{
+    position: fixed;
+    top:20px;
+    width:800px;
+    height:480px;
+    left:calc(50% - 400px);
+}
+
+#addComments{
+    position: fixed;
+    top:20px;
+    width:800px;
+    height:480px;
+    left:calc(50% - 400px);
+}
+#writeInfoC{
+    margin-right: 10px;
+    margin-bottom: 7px;
+}

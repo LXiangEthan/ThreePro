@@ -1,0 +1,62 @@
+html,body{
+    height:100%;
+    overflow: hidden;
+}
+#navs{
+    width:20%;
+}
+#containers{
+    width:80%;
+    height:80%;
+    border: #00fff9 2px solid;
+    overflow:auto;
+}
+.super{
+    background-color: rgba(0, 255, 0);
+    border: #ffae01 2px solid;
+}
+#ou-1{
+    height:calc(100% - 52px);
+}
+#ou-2{
+    height:100%;
+}
+#message{
+    height:80%;
+}
+#search{
+    position:sticky;
+    bottom: 0;
+}
+#emsp{
+    height:65px;
+    margin-top:10px;
+}
+#marg{
+    width:30px;
+}
+#cangku{
+    width:50px;
+    height:40px;
+    margin-right: 10px;
+    margin-bottom: 8px;
+}
+#request{
+    position: fixed;
+    top:calc(50% - 200px);
+    right:calc(50% - 225px);
+    width:450px;
+    overflow-y: scroll;
+}
+.fixReq{
+    overflow-y: scroll;
+    height:100px;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+
+#inputGo{
+    position: fixed;
+    bottom: 20px;
+}

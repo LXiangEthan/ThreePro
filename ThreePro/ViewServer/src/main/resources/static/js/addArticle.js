@@ -1,0 +1,28 @@
+$("#send").click(()=>{
+    if($("#contain").val() === ""){
+        return
+    }
+    $.ajax({
+        url:`/Article/`,
+        async:true,
+        dataType:"json",
+        method:"post",
+        data:JSON.stringify({
+            authorId:localStorage.getItem("id"),
+            infoData:$("#contain").val()
+        }),
+        headers:{
+            "Content-Type":"application/json"
+        },
+        success:(res)=>{
+            console.log(res)
+            location.reload()
+        },
+        error:(err)=>{
+            console.log(err)
+        }
+    })
+})
+$("#writeInfo").click(()=>{
+    $("#addArticle").toggle()
+})

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>ThreePro Communication</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/floating-labels/">
+
+    <!-- Bootstrap core CSS -->
+      <link href="./assets/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/login.css">
+    <!-- Custom styles for this template -->
+    <link href="./css/floating-labels.css" rel="stylesheet">
+    <script src="assets/js/jQuery.js"></script>
+  </head>
+  <body>
+
+
+  <div class="form-signin">
+  <div class="text-center mb-4">
+    <img class="mb-4" src="assets/brand/_叶子.svg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">ThreePro Login</h1>
+    <p>开源聊天系统 <code></code> 登录页面 <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>
+  </div>
+
+  <div class="form-label-group">
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <label for="inputEmail">Email address</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <label for="inputPassword">Password</label>
+  </div>
+
+    <div class="form-label-group" id="vPassword" >
+      <input type="password" id="verifyPassword" class="form-control" placeholder="Verify Password" required>
+      <label for="inputEmail">Verify Paaword</label>
+    </div>
+
+    <div class="input-group" id="intro" >
+      <div class="input-group-prepend">
+        <span class="input-group-text">个人介绍</span>
+      </div>
+      <textarea class="form-control" aria-label="With textarea" id="introText"></textarea>
+    </div>
+    <div class="input-group" id="describe" >
+      <div class="input-group-prepend">
+        <span class="input-group-text">账号描述</span>
+      </div>
+      <textarea class="form-control" aria-label="With textarea" id="describeText"></textarea>
+    </div>
+
+    <form>
+      <div class="form-group" id="ageBar">
+        <label for="formControlRange">Please input your Age</label>
+        <input type="range" class="form-control-range ageBarInput" id="formControlRange">
+      </div>
+    </form>
+
+
+    <div class="btn-group" role="group" aria-label="Third group" id="end">
+      <button type="button" class="btn btn-secondary" id="boy">男</button>
+      <button type="button" class="btn btn-secondary" id="girl">女</button>
+      <input class="form-control" type="text" placeholder="This is Your gender" readonly id="gender">
+      <input class="form-control" type="text" placeholder="This is Your Age" readonly id="age">
+    </div>
+
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me" id="signout"> 注册
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block sIn" type="submit">Sign in</button>
+  <button class="btn btn-lg btn-primary btn-block sOut" type="submit">Sign out</button>
+  <p class="mt-5 mb-3 text-muted text-center">&copy; 2024-2025</p>
+</div>
+  <div class="card" style="width: 18rem;" id="warning">
+
+    <div class="card-body">
+      <h5 class="card-title">Warning</h5>
+      <p class="card-text">请按照规范输入，登录邮箱和密码必须填写，注册性别和年龄也需要填写</p>
+      <button class="btn btn-primary" id="closeWarn">Go somewhere</button>
+    </div>
+  </div>
+
+
+
+  <script src="./js/hidden.js"></script>
+  <script src="./js/login.js"></script>
+  <script src="./js/getGender.js"></script>
+  <script src="./js/getAge.js"></script>
+  <script src="./js/signOut.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active: ${profile.active}
+# 设置启用的环境
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+server:
+  port: 3000
+---
+spring:
+  config:
+    activate:
+      on-profile: pro
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/threepro?serverTimezone=UTC
+    username: root
+    password: "123456"
+    # 巨坑，这里要加双引号，不然不能识别
+    type: com.alibaba.druid.pool.DruidDataSource
+server:
+  port: 80
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+server:
+  port: 3000
